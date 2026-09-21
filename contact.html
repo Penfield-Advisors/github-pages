@@ -3,8 +3,8 @@ layout: page
 title: Contact Us
 permalink: /contact/
 description: >-
-  Contact Penfield Advisors LLC by email or phone to discuss education
-  consulting services.
+  Contact Penfield Advisors LLC by email to discuss advisory support for your
+  organization.
 ---
 
 <section class="section">
@@ -15,7 +15,7 @@ description: >-
         <h2>Start a conversation</h2>
 
         <p>
-          The best first step is an email or a phone call. Share a short summary
+          The best first step is an email. Share a short summary
           of your organization, what you are trying to accomplish, and your
           rough timeline. We reply to every inquiry {{ site.company.response_time }}.
         </p>
@@ -23,22 +23,10 @@ description: >-
         <p>
           If it looks like a fit, we will schedule a no-cost discovery call to
           talk through scope, approach, and budget before any commitment is
-          made.
+          made. Engagements range from a focused operational assessment to
+          sustained advisory support through a period of growth or transition.
         </p>
 
-        <h3>Helpful details to include</h3>
-        <ul>
-          <li>Your organization and role</li>
-          <li>The challenge or decision you are facing</li>
-          <li>Who else is involved in the decision</li>
-          <li>Your timeline and any fixed deadlines</li>
-          <li>Whether a budget range has been set</li>
-        </ul>
-
-        <p>
-          <em>Placeholder content. Replace with the firm's actual intake
-          guidance.</em>
-        </p>
       </div>
 
       <div>
@@ -49,12 +37,6 @@ description: >-
               <p class="contact-list__label">Email</p>
               <p class="contact-list__value">
                 <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>
-              </p>
-            </li>
-            <li>
-              <p class="contact-list__label">Phone</p>
-              <p class="contact-list__value">
-                <a href="tel:{{ site.company.phone_link }}">{{ site.company.phone_display }}</a>
               </p>
             </li>
             <li>
@@ -69,17 +51,11 @@ description: >-
               <p class="contact-list__label">Hours</p>
               <p class="contact-list__value">{{ site.company.hours }}</p>
             </li>
-            <li>
-              <p class="contact-list__label">Online</p>
-              <p class="contact-list__value">
-                <a href="{{ site.company.linkedin }}" rel="noopener">LinkedIn</a>
-              </p>
-            </li>
           </ul>
         </div>
 
         <p class="bio__caption">
-          {{ site.company.legal_name }} works with clients on site and remotely.
+          {{ site.company.legal_name }} works with clients remotely.
         </p>
       </div>
     </div>
@@ -92,7 +68,6 @@ description: >-
     <p>Email us directly and we will take it from there.</p>
     <div class="btn-row">
       <a class="btn btn--primary" href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>
-      <a class="btn btn--ghost" href="tel:{{ site.company.phone_link }}">{{ site.company.phone_display }}</a>
     </div>
   </div>
 </section>
@@ -105,7 +80,6 @@ description: >-
   "description": {{ site.description | strip_newlines | strip | jsonify }},
   "url": {{ site.url | append: site.baseurl | jsonify }},
   "email": {{ site.company.email | jsonify }},
-  "telephone": {{ site.company.phone_display | jsonify }},
   "address": {
     "@type": "PostalAddress",
     "streetAddress": {{ site.company.address_line | jsonify }},
