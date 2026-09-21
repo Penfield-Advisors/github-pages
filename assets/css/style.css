@@ -495,10 +495,13 @@ hr {
   font-size: .9375rem;
 }
 
+/* Centre the columns against each other: the brand mark is taller than the
+   link lists, and stretched columns would leave the logo hanging below them. */
 .site-footer__inner {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  align-items: center;
   padding-bottom: 2.5rem;
 }
 
@@ -523,6 +526,9 @@ hr {
   padding: 0;
 }
 .site-footer__links li { margin-bottom: .5rem; }
+/* Trailing margin would pad the column box and drag the centring off by a few
+   pixels against the brand mark. */
+.site-footer__links li:last-child { margin-bottom: 0; }
 .site-footer__links a {
   color: rgba(255, 255, 255, .82);
   text-decoration: none;
