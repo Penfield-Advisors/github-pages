@@ -103,7 +103,6 @@ hr {
 
 .section { padding-block: clamp(3rem, 7vw, 5rem); }
 .section--surface { background: var(--surface); }
-.section--tight { padding-block: clamp(2rem, 4vw, 3rem); }
 
 .section__intro {
   max-width: 62ch;
@@ -215,7 +214,7 @@ hr {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  min-height: 74px;
+  min-height: 84px;
 }
 
 .site-header__brand {
@@ -223,21 +222,16 @@ hr {
   flex: 0 0 auto;
   line-height: 0;
 }
-/* The wide lockup carries ~38% vertical padding inside its 1620x810 viewBox.
-   A fixed box plus object-fit: cover crops that dead space so the wordmark
-   reads at a proper size, without editing the brand source file. The box must
-   stay wider than 2:1 for the crop to key off width and keep the mark intact. */
+/* The wide lockup is 3:1 and sized to its own spacing, so it is rendered at
+   natural proportions. Its built-in padding supplies the breathing room around
+   the mark, which is why the header bar is only slightly taller than the image. */
 .site-header__brand img {
-  width: 268px;
-  height: 56px;
-  object-fit: cover;
+  height: 80px;
+  width: auto;
 }
 
 @media (max-width: 560px) {
-  .site-header__brand img {
-    width: 200px;
-    height: 42px;
-  }
+  .site-header__brand img { height: 60px; }
 }
 
 .site-nav__list {
@@ -381,47 +375,6 @@ hr {
   width: 46px;
   height: 46px;
   margin-bottom: 1rem;
-}
-
-/* Image tiles (placeholder photography) */
-.tile {
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid var(--line);
-  background: var(--sky-pale);
-}
-.tile img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-.tile figcaption {
-  padding: .9rem 1.1rem;
-  font-size: .9375rem;
-  color: var(--muted);
-  background: var(--white);
-  margin: 0;
-}
-
-/* --- Stats --------------------------------------------------------------- */
-
-.stats {
-  display: grid;
-  gap: var(--gap);
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
-  text-align: center;
-}
-.stat__value {
-  font-family: var(--serif);
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  font-weight: 700;
-  color: var(--navy);
-  line-height: 1.1;
-}
-.stat__label {
-  color: var(--muted);
-  font-size: .9375rem;
-  margin: .25rem 0 0;
 }
 
 /* --- Split (media + text) ------------------------------------------------ */
