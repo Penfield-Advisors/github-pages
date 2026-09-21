@@ -491,7 +491,7 @@ hr {
 .site-footer {
   background: var(--navy-deep);
   color: rgba(255, 255, 255, .82);
-  padding-top: clamp(2.5rem, 6vw, 4rem);
+  padding-top: clamp(.625rem, 1.5vw, 1rem);
   font-size: .9375rem;
 }
 
