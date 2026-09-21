@@ -567,7 +567,9 @@ hr {
   color: rgba(255, 255, 255, .82);
   text-decoration: none;
 }
-.site-footer__links a:hover {
+/* Scoped to [href] so the Privacy Policy placeholder, which has no href yet,
+   does not give hover feedback for a destination that is not there. */
+.site-footer__links a[href]:hover {
   color: var(--sky);
   text-decoration: underline;
 }

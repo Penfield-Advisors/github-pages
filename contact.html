@@ -40,11 +40,9 @@ description: >-
               </p>
             </li>
             <li>
-              <p class="contact-list__label">Office</p>
+              <p class="contact-list__label">Location</p>
               <p class="contact-list__value">
-                {{ site.company.address_line }}<br>
                 {{ site.company.address_locality }}, {{ site.company.address_region }}
-                {{ site.company.address_postal }}
               </p>
             </li>
             <li>
@@ -82,10 +80,8 @@ description: >-
   "email": {{ site.company.email | jsonify }},
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": {{ site.company.address_line | jsonify }},
     "addressLocality": {{ site.company.address_locality | jsonify }},
     "addressRegion": {{ site.company.address_region | jsonify }},
-    "postalCode": {{ site.company.address_postal | jsonify }},
     "addressCountry": "US"
   }
 }
