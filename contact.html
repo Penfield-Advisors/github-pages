@@ -1,0 +1,160 @@
+---
+layout: page
+title: Contact Us
+subtitle: Tell us about your organization and the challenge in front of you.
+permalink: /contact/
+description: >-
+  Contact Penfield Advisors LLC by email or phone to discuss education
+  consulting services.
+---
+
+<section class="section">
+  <div class="wrap">
+    <div class="split">
+      <div class="prose">
+        <p class="eyebrow">How to reach us</p>
+        <h2>Start a conversation</h2>
+
+        <p>
+          The best first step is an email or a phone call. Share a short summary
+          of your organization, what you are trying to accomplish, and your
+          rough timeline. We reply to every inquiry {{ site.company.response_time }}.
+        </p>
+
+        <p>
+          If it looks like a fit, we will schedule a no-cost discovery call to
+          talk through scope, approach, and budget before any commitment is
+          made.
+        </p>
+
+        <h3>Helpful details to include</h3>
+        <ul>
+          <li>Your organization and role</li>
+          <li>The challenge or decision you are facing</li>
+          <li>Who else is involved in the decision</li>
+          <li>Your timeline and any fixed deadlines</li>
+          <li>Whether a budget range has been set</li>
+        </ul>
+
+        <p>
+          <em>Placeholder content. Replace with the firm's actual intake
+          guidance.</em>
+        </p>
+      </div>
+
+      <div>
+        <div class="card">
+          <h3>Contact information</h3>
+          <ul class="contact-list">
+            <li>
+              <p class="contact-list__label">Email</p>
+              <p class="contact-list__value">
+                <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>
+              </p>
+            </li>
+            <li>
+              <p class="contact-list__label">Phone</p>
+              <p class="contact-list__value">
+                <a href="tel:{{ site.company.phone_link }}">{{ site.company.phone_display }}</a>
+              </p>
+            </li>
+            <li>
+              <p class="contact-list__label">Office</p>
+              <p class="contact-list__value">
+                {{ site.company.address_line }}<br>
+                {{ site.company.address_locality }}, {{ site.company.address_region }}
+                {{ site.company.address_postal }}
+              </p>
+            </li>
+            <li>
+              <p class="contact-list__label">Hours</p>
+              <p class="contact-list__value">{{ site.company.hours }}</p>
+            </li>
+            <li>
+              <p class="contact-list__label">Online</p>
+              <p class="contact-list__value">
+                <a href="{{ site.company.linkedin }}" rel="noopener">LinkedIn</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <p class="bio__caption">
+          {{ site.company.legal_name }} works with clients on site and remotely.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="wrap">
+    <div class="section__intro">
+      <p class="eyebrow">Common questions</p>
+      <h2>Before you reach out</h2>
+    </div>
+
+    <div class="grid grid--4">
+      <article class="card">
+        <h3>Who do you work with?</h3>
+        <p>
+          Schools, districts, colleges, education nonprofits, and families. If
+          you are unsure whether your situation fits, ask — we will tell you
+          honestly.
+        </p>
+      </article>
+      <article class="card">
+        <h3>How are engagements priced?</h3>
+        <p>
+          Scope drives cost. Some clients need a short assessment; others need
+          year-long support. We quote after the discovery call.
+        </p>
+      </article>
+      <article class="card">
+        <h3>Do you work remotely?</h3>
+        <p>
+          Yes. Many engagements run remotely, with on-site visits scheduled at
+          the points where being in the building matters.
+        </p>
+      </article>
+      <article class="card">
+        <h3>How soon can you start?</h3>
+        <p>
+          Availability varies by season. Reach out with your timeline and we
+          will tell you what is realistic.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Ready when you are.</h2>
+    <p>Email us directly and we will take it from there.</p>
+    <div class="btn-row">
+      <a class="btn btn--primary" href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>
+      <a class="btn btn--ghost" href="tel:{{ site.company.phone_link }}">{{ site.company.phone_display }}</a>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": {{ site.company.legal_name | jsonify }},
+  "description": {{ site.description | strip_newlines | strip | jsonify }},
+  "url": {{ site.url | append: site.baseurl | jsonify }},
+  "email": {{ site.company.email | jsonify }},
+  "telephone": {{ site.company.phone_display | jsonify }},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": {{ site.company.address_line | jsonify }},
+    "addressLocality": {{ site.company.address_locality | jsonify }},
+    "addressRegion": {{ site.company.address_region | jsonify }},
+    "postalCode": {{ site.company.address_postal | jsonify }},
+    "addressCountry": "US"
+  }
+}
+</script>

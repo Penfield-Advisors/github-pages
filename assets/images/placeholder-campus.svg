@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Placeholder image: campus building">
+  <rect width="800" height="600" fill="#e8f2f8"/>
+  <g fill="none" stroke="#0b254b" stroke-opacity=".22" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M160 300h480"/>
+    <path d="M400 170 640 300H160z"/>
+    <path d="M224 300v152M312 300v152M400 300v152M488 300v152M576 300v152"/>
+    <path d="M140 452h520"/>
+  </g>
+  <g fill="#9bc6df">
+    <rect x="160" y="452" width="480" height="16" rx="8"/>
+    <circle cx="400" cy="246" r="18"/>
+  </g>
+  <text x="400" y="556" font-family="Georgia, serif" font-size="22" fill="#55647a" text-anchor="middle">Placeholder image</text>
+</svg>

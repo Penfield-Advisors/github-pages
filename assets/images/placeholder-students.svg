@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Placeholder image: students collaborating">
+  <rect width="800" height="600" fill="#e8f2f8"/>
+  <g fill="none" stroke="#0b254b" stroke-opacity=".22" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="300" cy="230" r="52"/>
+    <path d="M214 400c0-48 39-86 86-86s86 38 86 86"/>
+    <circle cx="486" cy="255" r="42"/>
+    <path d="M416 400c0-39 31-70 70-70s70 31 70 70"/>
+    <path d="M160 452h480"/>
+  </g>
+  <g fill="#9bc6df">
+    <rect x="232" y="470" width="136" height="14" rx="7"/>
+    <rect x="432" y="470" width="104" height="14" rx="7"/>
+  </g>
+  <text x="400" y="556" font-family="Georgia, serif" font-size="22" fill="#55647a" text-anchor="middle">Placeholder image</text>
+</svg>
