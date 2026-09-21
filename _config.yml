@@ -1,9 +1,10 @@
 # --- Site identity -----------------------------------------------------------
 title: Penfield Advisors
-tagline: Education Consulting
+tagline: Education Advisory
 description: >-
-  Penfield Advisors LLC is an education consulting firm partnering with schools,
-  districts, and families to turn goals into measurable outcomes.
+  Penfield Advisors LLC is an independent advisory practice supporting education
+  organizations with growth planning, operational insight, and executive-level
+  problem solving.
 
 # Deployment target. The site is served from the custom domain in ./CNAME, so it
 # sits at the web root and `baseurl` is empty. `url` must stay in sync with the
@@ -16,19 +17,20 @@ lang: en_US
 timezone: America/New_York
 
 # --- Company details ---------------------------------------------------------
-# Placeholder values. Update these and every page picks up the change.
+# Values marked PLACEHOLDER are still unconfirmed. Update them here and every
+# page picks up the change.
 company:
   legal_name: Penfield Advisors LLC
-  email: info@penfieldadvisors.example
-  phone_display: "(555) 010-1234"
-  phone_link: "+15550101234"
-  address_line: "123 Placeholder Way, Suite 100"
-  address_locality: "Rochester"
-  address_region: "NY"
-  address_postal: "14604"
-  hours: "Monday – Friday, 9:00 AM – 5:00 PM ET"
-  response_time: "within two business days"
-  linkedin: "https://www.linkedin.com/"
+  email: dcarr@penfieldadvisors.com
+  phone_display: "(555) 010-1234"          # PLACEHOLDER
+  phone_link: "+15550101234"               # PLACEHOLDER
+  address_line: "123 Placeholder Way, Suite 100"  # PLACEHOLDER
+  address_locality: "West Chester"
+  address_region: "PA"
+  address_postal: "00000"                  # PLACEHOLDER
+  hours: "Monday – Friday, 9:00 AM – 6:00 PM ET"
+  response_time: "within two business days"       # PLACEHOLDER
+  linkedin: "https://www.linkedin.com/in/darbycarr/"
 
 founder:
   name: "Darby Carr"
