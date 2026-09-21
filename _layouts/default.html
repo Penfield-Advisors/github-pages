@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{%- comment -%}
+  site.lang is stored in the underscore form jekyll-seo-tag needs for og:locale
+  (en_US); the html lang attribute requires the BCP 47 hyphenated form.
+{%- endcomment -%}
+<html lang="{{ site.lang | default: 'en_US' | replace: '_', '-' }}">
+<head>
+  {%- include head.html -%}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  {%- include header.html -%}
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  {%- include footer.html -%}
+
+  <script src="{{ '/assets/js/nav.js' | relative_url }}" defer></script>
+</body>
+</html>
