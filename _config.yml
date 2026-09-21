@@ -31,9 +31,10 @@ company:
   linkedin: "https://www.linkedin.com/"
 
 founder:
-  name: "Jane Placeholder"
-  role: "Founder & Principal Consultant"
-  email: "jane@penfieldadvisors.example"
+  name: "Darby Carr"
+  role: "Founder & Managing Director"
+  email: "dcarr@penfieldadvisors.com"
+  linkedin: "https://www.linkedin.com/in/darbycarr/"
 
 # --- Navigation --------------------------------------------------------------
 nav:

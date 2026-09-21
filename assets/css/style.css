@@ -387,12 +387,25 @@ hr {
   border: 1px solid var(--line);
 }
 
-/* Founder portrait block. An explicit portrait track keeps the image from
-   leaving a dead gap beside itself inside an equal-width auto-fit column. */
-.bio { align-items: start; }
+/* Founder portrait block. Text and portrait are separate columns, so the copy
+   never wraps under the image; the portrait keeps its own column and the space
+   below it stays open. An explicit portrait track rather than an auto-fit one
+   stops the image stretching to half the row. */
+.bio {
+  display: grid;
+  gap: clamp(1.75rem, 4vw, 3rem);
+  align-items: start;
+}
 
+/* The default prose cap would leave a gap on the right of the text column. */
+.bio .prose { max-width: none; }
+
+/* Media sits second visually but first in source order, which keeps the
+   portrait above the bio once the columns stack on narrow screens. */
 @media (min-width: 52rem) {
-  .bio { grid-template-columns: 20rem minmax(0, 1fr); }
+  .bio { grid-template-columns: minmax(0, 1fr) 20rem; }
+  .bio__media { grid-area: 1 / 2; }
+  .bio .prose { grid-area: 1 / 1; }
 }
 
 .bio__media { max-width: 22rem; }
@@ -401,8 +414,11 @@ hr {
   border-radius: var(--radius);
   border: 1px solid var(--line);
 }
+/* The caption drops its paragraph bottom margin so the links below sit tight
+   against the role line rather than a full line-height away. */
 .bio__caption {
   margin-top: .9rem;
+  margin-bottom: 0;
   font-size: .9375rem;
   color: var(--muted);
 }
@@ -412,18 +428,36 @@ hr {
   font-size: 1rem;
 }
 
+/* Contact links for the founder, stacked under the portrait caption. They take
+   the caption's size and colour so the whole block reads as one unit; the
+   underline is what marks them as links. */
+.bio__links {
+  list-style: none;
+  padding: 0;
+  margin: .35rem 0 0;
+  font-size: .9375rem;
+  color: var(--muted);
+}
+.bio__links li { margin-bottom: .35rem; }
+.bio__links li:last-child { margin-bottom: 0; }
+.bio__links a { color: inherit; }
+.bio__links a:hover { color: var(--navy); }
+
 /* --- Page head ----------------------------------------------------------- */
 
 /* Height is set here rather than on .page-head's background so the banner has
    room for the artwork to read instead of showing a thin centre strip. */
 .page-head {
   color: var(--white);
-  padding-block: clamp(3.5rem, 9vw, 6rem);
+  padding-block: clamp(2.5rem, 6vw, 4rem);
 }
 .page-head__title {
   color: var(--white);
   margin-bottom: .25em;
 }
+/* Without a subtitle the title's margin would offset the banner's padding and
+   push the text off centre. */
+.page-head__title:last-child { margin-bottom: 0; }
 .page-head__subtitle {
   color: var(--sky);
   font-size: 1.125rem;
