@@ -21,7 +21,11 @@ description: >-
         </p>
         <ul class="bio__links">
           <li><a href="mailto:{{ site.founder.email }}">{{ site.founder.email }}</a></li>
-          <li><a href="{{ site.founder.linkedin }}" rel="noopener">LinkedIn</a></li>
+          <li>
+            <a href="{{ site.founder.linkedin }}" target="_blank" rel="noopener">
+              LinkedIn<span class="u-visually-hidden"> (opens in a new tab)</span>
+            </a>
+          </li>
         </ul>
       </div>
 

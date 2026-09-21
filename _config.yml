@@ -21,15 +21,15 @@ timezone: America/New_York
 # page picks up the change.
 company:
   legal_name: Penfield Advisors LLC
-  email: dcarr@penfieldadvisors.com
-  phone_display: "(555) 010-1234"          # PLACEHOLDER
-  phone_link: "+15550101234"               # PLACEHOLDER
-  address_line: "123 Placeholder Way, Suite 100"  # PLACEHOLDER
+  email: contact@penfieldadvisors.com
+  # The practice has no street office, so only the city and state are listed.
   address_locality: "West Chester"
   address_region: "PA"
-  address_postal: "00000"                  # PLACEHOLDER
   hours: "Monday – Friday, 9:00 AM – 6:00 PM ET"
-  response_time: "within two business days"       # PLACEHOLDER
+  response_time: "as soon as possible"
+  # No company page yet, so this points at the founder's profile. Repoint it
+  # here alone if the practice gets its own page; the About page links to
+  # founder.linkedin separately.
   linkedin: "https://www.linkedin.com/in/darbycarr/"
 
 founder:
