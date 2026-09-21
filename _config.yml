@@ -5,11 +5,12 @@ description: >-
   Penfield Advisors LLC is an education consulting firm partnering with schools,
   districts, and families to turn goals into measurable outcomes.
 
-# Deployment target. This repo publishes as a GitHub Pages *project* site, so the
-# site lives under /github-pages. When a custom domain is added, set
-# `url` to that domain and `baseurl` to an empty string.
-url: "https://penfield-advisors.github.io"
-baseurl: "/github-pages"
+# Deployment target. The site is served from the custom domain in ./CNAME, so it
+# sits at the web root and `baseurl` is empty. `url` must stay in sync with the
+# custom domain: jekyll-seo-tag builds canonical tags and jekyll-sitemap builds
+# sitemap entries from it.
+url: "https://penfieldadvisors.com"
+baseurl: ""
 
 lang: en_US
 timezone: America/New_York
