@@ -371,12 +371,6 @@ hr {
   margin-bottom: 0;
 }
 
-.card__icon {
-  width: 46px;
-  height: 46px;
-  margin-bottom: 1rem;
-}
-
 /* --- Split (media + text) ------------------------------------------------ */
 
 .split {
