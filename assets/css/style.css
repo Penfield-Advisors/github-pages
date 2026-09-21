@@ -322,10 +322,16 @@ hr {
 
 /* --- Hero ---------------------------------------------------------------- */
 
-.hero {
+/* Shared navy-over-artwork treatment. The gradient sits above the image so the
+   art stays faded enough for white text to hold contrast over any part of it. */
+.hero,
+.page-head {
   background:
     linear-gradient(180deg, rgba(8, 27, 56, .86), rgba(11, 37, 75, .94)),
-    url("../images/placeholder-hero.svg") center / cover no-repeat;
+    var(--navy) url("../images/placeholder-hero.svg") center / cover no-repeat;
+}
+
+.hero {
   color: var(--white);
   padding-block: clamp(4rem, 11vw, 7.5rem);
 }
@@ -413,10 +419,11 @@ hr {
 
 /* --- Page head ----------------------------------------------------------- */
 
+/* Height is set here rather than on .page-head's background so the banner has
+   room for the artwork to read instead of showing a thin centre strip. */
 .page-head {
-  background: var(--navy);
   color: var(--white);
-  padding-block: clamp(2.5rem, 6vw, 4rem);
+  padding-block: clamp(3.5rem, 9vw, 6rem);
 }
 .page-head__title {
   color: var(--white);
