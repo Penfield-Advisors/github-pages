@@ -47,7 +47,11 @@ footer are navy. The non-transparent variants carry their own navy background
 and are the ones to use on light surfaces.
 
 `leaf-logo.svg` is the favicon; `main-logo-wide-transparent.svg` is the header
-lockup; `main-logo-transparent.svg` is the footer mark.
+lockup; `main-logo-transparent.svg` is the footer mark; `small-logo.png`
+(180x180) is the iOS home-screen icon.
+
+That last one must stay a PNG and must stay opaque — iOS ignores SVG for
+`apple-touch-icon` and composites transparency onto black.
 
 ## Updating content
 
