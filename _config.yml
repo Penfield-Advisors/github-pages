@@ -1,0 +1,59 @@
+# --- Site identity -----------------------------------------------------------
+title: Penfield Advisors
+tagline: Education Consulting
+description: >-
+  Penfield Advisors LLC is an education consulting firm partnering with schools,
+  districts, and families to turn goals into measurable outcomes.
+
+# Deployment target. This repo publishes as a GitHub Pages *project* site, so the
+# site lives under /github-pages. When a custom domain is added, set
+# `url` to that domain and `baseurl` to an empty string.
+url: "https://penfield-advisors.github.io"
+baseurl: "/github-pages"
+
+lang: en_US
+timezone: America/New_York
+
+# --- Company details ---------------------------------------------------------
+# Placeholder values. Update these and every page picks up the change.
+company:
+  legal_name: Penfield Advisors LLC
+  email: info@penfieldadvisors.example
+  phone_display: "(555) 010-1234"
+  phone_link: "+15550101234"
+  address_line: "123 Placeholder Way, Suite 100"
+  address_locality: "Rochester"
+  address_region: "NY"
+  address_postal: "14604"
+  hours: "Monday – Friday, 9:00 AM – 5:00 PM ET"
+  response_time: "within two business days"
+  linkedin: "https://www.linkedin.com/"
+
+founder:
+  name: "Jane Placeholder"
+  role: "Founder & Principal Consultant"
+  email: "jane@penfieldadvisors.example"
+
+# --- Navigation --------------------------------------------------------------
+nav:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Contact
+    url: /contact/
+
+# --- Build -------------------------------------------------------------------
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .github
