@@ -82,22 +82,30 @@ with Jekyll and publishes it to GitHub Pages.
 
 One-time setup: in **Settings → Pages**, set **Source** to **GitHub Actions**.
 
-The live site is <https://penfield-advisors.github.io/github-pages/>.
+The live site is <https://penfieldadvisors.com>.
 
-### Moving to a custom domain
+### Custom domain
 
-Because this is a *project* site, `baseurl` is set to `/github-pages` so that
-asset and link paths resolve correctly. When a custom domain is ready:
+The site is served from `penfieldadvisors.com`, declared in the `CNAME` file at
+the repo root. Because it sits at the web root, `baseurl` is empty and `url` is
+the full domain — keep those two in sync with `CNAME` if the domain ever
+changes, since canonical tags and the sitemap are generated from `url`.
 
-1. Add a `CNAME` file at the repo root containing the domain, e.g.
-   `penfieldadvisors.com`.
-2. In `_config.yml`, set `url` to `https://penfieldadvisors.com` and change
-   `baseurl` to `""`.
-3. Configure the domain under **Settings → Pages** and enable
-   **Enforce HTTPS**.
+DNS is managed in Cloudflare. The apex points at GitHub's Pages IPv4 and IPv6
+addresses and `www` is a CNAME to `penfield-advisors.github.io`; GitHub
+redirects `www` to the apex automatically.
 
-All internal links use Jekyll's `relative_url` filter, so nothing else needs to
-change.
+Two Cloudflare settings matter, and both will break the site if set wrong:
+
+- **Proxy status must be DNS only (grey cloud).** With the orange cloud on,
+  GitHub cannot complete the certificate challenge and *Enforce HTTPS* stays
+  unavailable.
+- **If the proxy is ever enabled**, SSL/TLS mode must be **Full** or **Full
+  (strict)**. *Flexible* causes an infinite redirect loop against Pages'
+  own HTTPS redirect.
+
+All internal links use Jekyll's `relative_url` filter, so a future domain or
+`baseurl` change needs no edits to page markup.
 
 ## Conventions
 
