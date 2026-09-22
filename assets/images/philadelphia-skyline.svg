@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Abstract line drawing of the Philadelphia skyline and the Benjamin Franklin Bridge">
+  <!--
+    Rendered only as a CSS background behind the .hero / .page-head navy
+    gradient (see assets/css/style.css), which sits at 86–94% alpha. Stroke
+    opacities are tuned to survive that overlay: the outlines read at ~.8, with
+    detail lines dropping to ~.3 so they fade out rather than turning to noise.
+    The towers straddle the canvas's vertical centre so they stay in frame when
+    the shorter .page-head band crops the artwork to a centre strip.
+  -->
+  <defs>
+    <linearGradient id="hero-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16386e"/>
+      <stop offset="1" stop-color="#081b38"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#hero-bg)"/>
+
+  <g fill="none" stroke="#9bc6df" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Sun behind the skyline, carried over from the previous artwork. -->
+    <g stroke-opacity=".2" stroke-width="2">
+      <circle cx="1150" cy="290" r="140"/>
+      <circle cx="1150" cy="290" r="235"/>
+    </g>
+
+    <!-- Riverbank the city sits on. -->
+    <path d="M0 600 H1600" stroke-opacity=".5" stroke-width="2"/>
+
+    <!-- Tower and crown outlines. -->
+    <g stroke-opacity=".8" stroke-width="2">
+      <path d="M110 600 V490 H185 V600"/>
+      <path d="M195 600 V455 H255 V600"/>
+
+      <!-- City Hall: tiered base, clock tower, William Penn on the cap. -->
+      <path d="M270 600 V505 H400 V600"/>
+      <path d="M310 505 V370 H360 V505"/>
+      <path d="M310 370 L335 330 L360 370"/>
+      <path d="M335 330 V312"/>
+      <circle cx="335" cy="305" r="6"/>
+
+      <!-- BNY Mellon Center: pyramid crown. -->
+      <path d="M415 600 V345 H500 V600"/>
+      <path d="M415 345 L457 285 L500 345"/>
+
+      <!-- One Liberty Place: stepped gables to a spire. -->
+      <path d="M545 600 V315 H645 V600"/>
+      <path d="M545 315 V298 H567 V272 H583 V246 H591 V180 L595 168 L599 180 V246 H607 V272 H623 V298 H645 V315"/>
+
+      <!-- Two Liberty Place: the same crown, one step shorter. -->
+      <path d="M665 600 V350 H735 V600"/>
+      <path d="M665 350 V336 H681 V318 H696 V268 L700 258 L704 268 V318 H719 V336 H735 V350"/>
+
+      <!-- Comcast Center: flat top with a stepped glass crown. -->
+      <path d="M760 600 V300 H860 V600"/>
+      <path d="M838 300 V286 H860 V300"/>
+
+      <!-- Comcast Technology Center: tallest, topped by its mast. -->
+      <path d="M880 600 V205 H965 V600"/>
+      <path d="M922 205 V120"/>
+      <path d="M914 160 H930"/>
+
+      <path d="M985 600 V420 H1045 V600"/>
+      <path d="M1060 600 V465 H1115 V600"/>
+
+      <!-- PSFS Building: sign band and rooftop antenna. -->
+      <path d="M1135 600 V395 H1210 V600"/>
+      <path d="M1135 415 H1210"/>
+      <path d="M1172 395 V350"/>
+
+      <path d="M1225 600 V500 H1270 V600"/>
+      <path d="M1282 600 V520 H1320 V600"/>
+
+      <!-- Benjamin Franklin Bridge: towers, deck, and main cable. -->
+      <path d="M1350 555 V340 H1392 V555"/>
+      <path d="M1520 555 V340 H1562 V555"/>
+      <path d="M1300 555 H1600"/>
+      <path d="M1300 520 Q1340 400 1371 340"/>
+      <path d="M1371 340 Q1456 470 1541 340"/>
+      <path d="M1541 340 Q1575 400 1600 460"/>
+    </g>
+
+    <!-- Bridge tower crossbars, suspenders, and window mullions. -->
+    <g stroke-opacity=".34" stroke-width="2">
+      <path d="M1350 400 H1392 M1350 470 H1392"/>
+      <path d="M1520 400 H1562 M1520 470 H1562"/>
+      <path d="M1400 377 V555 M1435 401 V555 M1456 405 V555 M1490 395 V555 M1515 374 V555"/>
+
+      <path d="M435 600 V360 M457 600 V360 M480 600 V360"/>
+      <path d="M570 600 V330 M595 600 V330 M620 600 V330"/>
+      <path d="M785 600 V315 M810 600 V315 M835 600 V315"/>
+      <path d="M900 600 V220 M922 600 V220 M945 600 V220"/>
+      <path d="M1155 600 V430 M1190 600 V430"/>
+
+      <path d="M985 480 H1045 M1060 515 H1115 M270 540 H400"/>
+    </g>
+
+    <!-- Reflections in the Delaware, then the water itself. -->
+    <g stroke-opacity=".28" stroke-width="2">
+      <path d="M335 608 V668"/>
+      <path d="M457 608 V690"/>
+      <path d="M595 608 V712"/>
+      <path d="M700 608 V678"/>
+      <path d="M810 608 V700"/>
+      <path d="M922 608 V740"/>
+      <path d="M1172 608 V672"/>
+      <path d="M1371 608 V684"/>
+      <path d="M1541 608 V684"/>
+    </g>
+
+    <g stroke-opacity=".4" stroke-width="2">
+      <path d="M0 690 C320 660, 560 720, 880 680 S1400 630, 1600 665"/>
+      <path d="M0 745 C340 715, 600 775, 920 735 S1420 660, 1600 715"/>
+      <path d="M0 800 C300 780, 700 830, 1000 800 S1450 760, 1600 790"/>
+    </g>
+  </g>
+</svg>

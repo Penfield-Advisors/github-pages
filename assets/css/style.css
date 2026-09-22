@@ -328,7 +328,7 @@ hr {
 .page-head {
   background:
     linear-gradient(180deg, rgba(8, 27, 56, .86), rgba(11, 37, 75, .94)),
-    var(--navy) url("../images/placeholder-hero.svg") center / cover no-repeat;
+    var(--navy) url("../images/philadelphia-skyline.svg") center / cover no-repeat;
 }
 
 .hero {
