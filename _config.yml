@@ -1,10 +1,10 @@
 # --- Site identity -----------------------------------------------------------
 title: Penfield Advisors
-tagline: Education Advisory
+tagline: Education Growth and Operations
 description: >-
-  Penfield Advisors LLC is an independent advisory practice supporting education
-  organizations with growth planning, operational insight, and executive-level
-  problem solving.
+  Penfield Advisors LLC is an independent practice run by an operator who has
+  carried the P&L — building growth plans with education organizations, running
+  the execution, and moving the numbers.
 
 # Deployment target. The site is served from the custom domain in ./CNAME, so it
 # sits at the web root and `baseurl` is empty. `url` must stay in sync with the
