@@ -1,17 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" width="1600" height="720" role="img" aria-label="Line drawing of the Philadelphia skyline, from the University City towers through City Hall to the Benjamin Franklin Bridge">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -190 1600 910" width="1600" height="910" role="img" aria-label="Line drawing of the Philadelphia skyline, from the University City towers through City Hall to the Benjamin Franklin Bridge">
   <!--
     Rendered only as a CSS background behind the .hero / .page-head navy
-    gradient (see assets/css/style.css), which sits at 78-87% alpha. Stroke
-    opacities are tuned to survive that overlay: outlines read at ~.8, with
-    detail lines dropping to ~.3 so they fade out rather than turning to noise.
+    gradient (see assets/css/style.css), which sits at 68-74% alpha. Stroke
+    opacities are tuned to survive that overlay: outlines read at ~.9, with
+    detail lines dropping to ~.4 so they fade out rather than turning to noise.
+    The .9 outline is the ceiling — any higher and the brightest stroke stops
+    clearing 4.5:1 against the sky-blue hero lead that sits over it.
 
     Framing: `cover` scales the artwork to the container's width, so the
     visible band is always 1600 * (container height / container width) user
-    units centred on y=360 — roughly 190 units on the short .page-head banner
-    against roughly 540 on the .hero. The city is therefore drawn at full size
-    and then scaled to 65% by the transform below, which lands the whole
-    skyline in a ~300-unit band centred on y=360: the banner keeps the crowns
-    and most of the towers, and the hero adds sky above and river below.
+    units — roughly 190 units on the short .page-head banner against roughly
+    600 on the .hero. The city is drawn at full size and then scaled to 65% by
+    the transform below, which lands the whole skyline in a ~280-unit band
+    running from y=218 (the Comcast Technology Center crown) to the y=495
+    shoreline. The viewBox then starts at y=-190 rather than 0: that headroom
+    is empty sky, and it is what keeps the towers clear of the hero copy. The
+    banner centres the band and keeps the crowns and upper towers; the hero
+    anchors the artwork to the top, which puts 408 units of sky behind the
+    eyebrow, headline, and lead, lands the crowns just under the lead's last
+    line, and crops the towers at the hero's lower edge — the shoreline and
+    water below it never show there, by design.
 
     Inside that transform the city is drawn to a single scale of 0.38 units per
     foot off its local y=555 shoreline, so relative heights match the real
@@ -28,7 +36,7 @@
     </linearGradient>
   </defs>
 
-  <rect width="1600" height="720" fill="url(#hero-bg)"/>
+  <rect x="0" y="-190" width="1600" height="910" fill="url(#hero-bg)"/>
 
   <g fill="none" stroke="#9bc6df" stroke-linecap="round" stroke-linejoin="round">
 
@@ -39,11 +47,11 @@
     </g>
 
     <!-- Shoreline, drawn full width so the city reads as sitting on the river. -->
-    <path d="M0 495 H1600" stroke-opacity=".5" stroke-width="2"/>
+    <path d="M0 495 H1600" stroke-opacity=".6" stroke-width="2"/>
 
     <g transform="translate(280 134) scale(.65)">
 
-      <g stroke-opacity=".8" stroke-width="3">
+      <g stroke-opacity=".9" stroke-width="3">
 
         <!-- West Philadelphia: low blocks, a rooftop water tower, a stack. -->
         <path d="M-430 555 V470 H-380 V555"/>
@@ -147,7 +155,7 @@
       </g>
 
       <!-- Low-rise city in front of the towers, mullions, bridge steelwork. -->
-      <g stroke-opacity=".34" stroke-width="3">
+      <g stroke-opacity=".45" stroke-width="3">
         <path d="M-430 522 H-330 V510 H-240 V524 H-150 V512 H-60 V522 H90 V508 H180 V524 H260 V512 H340 V526 H420 V510 H510 V522 H600 V508 H690 V520 H780 V506 H870 V518 H960 V510 H1050 V524 H1140 V512 H1230 V520 H1300"/>
 
         <path d="M175 389 V555 M205 389 V555"/>
@@ -175,7 +183,7 @@
       </g>
 
       <!-- Reflections in the Delaware. -->
-      <g stroke-opacity=".28" stroke-width="3">
+      <g stroke-opacity=".38" stroke-width="3">
         <path d="M262 562 V604"/>
         <path d="M425 562 V614"/>
         <path d="M582 562 V626"/>
@@ -192,7 +200,7 @@
     </g>
 
     <!-- Water, drawn full width beneath the city. -->
-    <g stroke-opacity=".4" stroke-width="2">
+    <g stroke-opacity=".5" stroke-width="2">
       <path d="M0 560 C320 546, 560 574, 880 558 S1400 536, 1600 552"/>
       <path d="M0 620 C340 606, 600 634, 920 616 S1420 588, 1600 612"/>
       <path d="M0 680 C300 668, 700 696, 1000 680 S1450 656, 1600 674"/>
