@@ -324,18 +324,26 @@ hr {
 
 /* Shared navy-over-artwork treatment. The gradient sits above the image so the
    art stays faded enough for white text to hold contrast over any part of it.
-   At these alphas the brightest stroke composites to about #1c3957, which still
-   clears 11:1 against the white headings and 6:1 against the sky-blue lead. */
+   The alphas ease off toward the bottom, where the towers are, so the drawing
+   reads as a solid skyline rather than a wash. Measured against the rendered
+   page, the brightest stroke composites to about #314c69: 8.9:1 against the
+   white headings and 4.9:1 against the sky-blue lead, so the bottom stop is
+   about as light as the artwork can go and still carry text. */
 .hero,
 .page-head {
   background:
-    linear-gradient(180deg, rgba(8, 27, 56, .78), rgba(11, 37, 75, .87)),
+    linear-gradient(180deg, rgba(8, 27, 56, .76), rgba(9, 30, 62, .72)),
     var(--navy) url("../images/philadelphia-skyline.svg") center / cover no-repeat;
 }
 
 .hero {
   color: var(--white);
-  padding-block: clamp(4rem, 11vw, 7.5rem);
+  padding-block: clamp(2.75rem, 7vw, 4.5rem);
+  /* The hero is tall enough to show the whole drawing, so anchoring it to the
+     top drops the towers into the lower band and leaves the artwork's open sky
+     behind the eyebrow and headline. The shorter .page-head banner keeps the
+     centred framing, which is the only way the crowns fit in its thin strip. */
+  background-position: center top, center top;
 }
 
 .hero__inner { max-width: 44rem; }

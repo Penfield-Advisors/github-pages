@@ -95,7 +95,7 @@ the brand colours by construction.
 | Value | Where |
 | --- | --- |
 | `rgba(11, 37, 75, .06)` / `rgba(11, 37, 75, .08)` | `--shadow` — navy-tinted card shadow |
-| `rgba(8, 27, 56, .86)` → `rgba(11, 37, 75, .94)` | Hero and page-head gradient over the background artwork |
+| `rgba(8, 27, 56, .76)` → `rgba(9, 30, 62, .72)` | Hero and page-head gradient over the background artwork |
 | `rgba(255, 255, 255, .82)` | Footer link and body text |
 | `rgba(255, 255, 255, .62)` | Footer legal line |
 | `rgba(255, 255, 255, .55)` / `.14` / `.12` / `.1` | Ghost-button border, footer rule, nav hover, mobile nav border |
