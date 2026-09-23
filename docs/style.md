@@ -76,7 +76,7 @@ non-transparent variant.
 
 | Token | Hex | Use |
 | --- | --- | --- |
-| `--sky-pale` | `#e8f2f8` | Tint fill (currently used by the placeholder portrait artwork) |
+| `--sky-pale` | `#e8f2f8` | Tint fill — declared for future use; no rule references it today |
 
 ### Neutrals
 
