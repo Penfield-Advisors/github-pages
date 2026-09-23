@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" width="1600" height="720" role="img" aria-label="Line drawing of the Philadelphia skyline, from the University City towers through City Hall to the Benjamin Franklin Bridge">
   <!--
     Rendered only as a CSS background behind the .hero / .page-head navy
-    gradient (see assets/css/style.css), which sits at 86-94% alpha. Stroke
+    gradient (see assets/css/style.css), which sits at 78-87% alpha. Stroke
     opacities are tuned to survive that overlay: outlines read at ~.8, with
     detail lines dropping to ~.3 so they fade out rather than turning to noise.
 
