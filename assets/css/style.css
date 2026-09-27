@@ -324,26 +324,20 @@ hr {
 
 /* Shared navy-over-artwork treatment. The gradient sits above the image so the
    art stays faded enough for white text to hold contrast over any part of it.
-   The alphas ease off toward the bottom, where the towers are, so the drawing
-   reads as a solid skyline rather than a wash. Measured against the rendered
-   page, the brightest stroke composites to about #314c69: 8.9:1 against the
-   white headings and 4.9:1 against the sky-blue lead, so the bottom stop is
-   about as light as the artwork can go and still carry text. */
+   Sampled from the rendered page, the brightest stroke composites to about
+   #152f52: 13.5:1 against the white headings and 7.4:1 against the sky-blue
+   lead, so there is room to ease the alphas further if the art should come
+   forward again — the sky-blue lead is the binding constraint at 4.5:1. */
 .hero,
 .page-head {
   background:
-    linear-gradient(180deg, rgba(8, 27, 56, .76), rgba(9, 30, 62, .72)),
-    var(--navy) url("../images/philadelphia-skyline.svg") center / cover no-repeat;
+    linear-gradient(180deg, rgba(8, 27, 56, .78), rgba(11, 37, 75, .86)),
+    var(--navy) url("../images/placeholder-hero.svg") center / cover no-repeat;
 }
 
 .hero {
   color: var(--white);
   padding-block: clamp(2.75rem, 7vw, 4.5rem);
-  /* The hero is tall enough to show the whole drawing, so anchoring it to the
-     top drops the towers into the lower band and leaves the artwork's open sky
-     behind the eyebrow and headline. The shorter .page-head banner keeps the
-     centred framing, which is the only way the crowns fit in its thin strip. */
-  background-position: center top, center top;
 }
 
 .hero__inner { max-width: 44rem; }
@@ -419,10 +413,18 @@ hr {
 }
 
 .bio__media { max-width: 22rem; }
+/* The portrait is tall (1192x1800), so at full column width on a phone it fills
+   the screen and pushes the whole bio below the fold. Half width keeps it in
+   proportion while the caption and links below still get the full width they
+   need for the email address. The desktop layout gives the media its own 20rem
+   column, where the portrait should fill it. */
 .bio__media img {
-  width: 100%;
+  width: 50%;
   border-radius: var(--radius);
   border: 1px solid var(--line);
+}
+@media (min-width: 52rem) {
+  .bio__media img { width: 100%; }
 }
 /* The caption drops its paragraph bottom margin so the links below sit tight
    against the role line rather than a full line-height away. */
